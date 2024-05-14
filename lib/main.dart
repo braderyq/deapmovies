@@ -1,4 +1,5 @@
-import 'package:deapmovies/home.dart';
+import 'package:deapmovies/Features/home.dart';
+import 'package:deapmovies/Features/navbar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        appBarTheme: AppBarTheme(
+            iconTheme: IconThemeData(color: Colors.white, size: 20)),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Home(),
+      home: NavBar(),
     );
   }
 }
